@@ -2,87 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: grid;
-      grid-template-areas:
-        "header header header"
-        "menu main ad1"
-        "menu main ad1"
-        "ad2 ad2 ad2"
-        "footer footer footer";
-      grid-template-columns: 1fr 3fr 1fr;
-      grid-template-rows: auto 1fr auto auto auto;
-      height: 100vh;
-    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.navbar{
+    display: flex;
+    /* border: 2px solid red; */
+    background-color: rgb(245, 240, 233);
+    border-bottom: 2px solid rgb(111, 108, 108);
+}
+.logo{
+    /* border: 2px solid orange; */
+    height: 50px;
+    width: 50%;
+    margin: 5px;
+}
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 2px solid green; */
+    height: 50px;
+    width: 50%;
+    margin: 5px;
+}
+h2{
+    margin-top: 4px;
+    margin-left: 50px;
+    font-size: 35px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#btn{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+}
+#btn:hover{
+    background-color: rgb(109, 107, 107);
 
-    header {
-      grid-area: header;
-      background: #4CAF50;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    nav {
-      grid-area: menu;
-      background: #f4f4f4;
-      padding: 10px;
-    }
-
-    main {
-      grid-area: main;
-      background: #fff;
-      padding: 10px;
-    }
-
-    .ad1 {
-        /*border: #4CAF50;*/
-      grid-area: ad1;
-      background: #ddd;
-      padding: 10px;
-    }
-
-    .ad2 {
-       
-      grid-area: ad2;
-      background: #ccc;
-      padding: 10px;
-      grid-row: 3;
-      grid-column: 1;
-      
-      
-     
-    }
-    
-    footer {
-    border: #4CAF50;
-      grid-area: footer;
-      background: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-
-
-
-
-   
+}
+a:hover{
+    color: red;
+}
+.main{
+    display: flex;
+    /* border: 2px solid red; */
+    height: 80%;
+    background-color: rgb(245, 240, 233);
+    border-bottom: 2px solid rgb(111, 108, 108);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 65%;
+    padding: 70px;
+}
+.img{
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 35%;
+}
+button{
+    width: 150px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+}
+h1{
+    font-size: 70px;
+}
+h5{
+    margin: 40px 0px;
+    font-size: 20px;
+}
+img{
+    height: 110%;
+    width: 100%;
+}
+.footer{
+    /* border: 2px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8%;
+     background-color: rgb(245, 240, 233);
+     z-index: 2;
+}
 </style>
 <body>
-    <header>Header</header>
-    <nav>Menu</nav>
-    <main>Main Content</main>
-    <div class="ad1">Ad 1</div>
-    <div class="ad2">Ad 2</div>
-    <footer>Footer</footer>
-
-
-
+    <div class="navbar">
+        <div class="logo">
+            <h2>Medium</h2>
+        </div>
+        <div class="link">
+            <a href="">Our Story</a>
+            <a href="">Membership</a>
+            <a href="">SignIn</a>
+            <a href="">Write</a>
+            <a id="btn" href="">Get Started</a>
+        </div>
     </div>
+    <div class="main">
+        <div class="content">
+            <h1>Human <br> Stories & Ideas</h1>
+            <h5>A place to read write and Deepen your understanding</h5>
+            <button>Start Reading</button>
+        </div>
+        <div class="img">
+            <img src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" alt="">
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="">Blog</a>
+        <a href="">Blog</a>
+        <a href="">Blog</a>
+        <a href="">Blog</a>
+        <a href="">Blog</a>
+        <a href="">Blog</a>
+        <a href="">Blog</a>
+    </footer>
 </body>
 </html>
